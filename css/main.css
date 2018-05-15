@@ -125,6 +125,7 @@ strong {
 .company-intro {
   font-size: 1.8em;
   background: black;
+  position: relative;
 }
 
 .blurb {
@@ -152,9 +153,107 @@ strong {
 
 }
 
+/* Services */
 
+.services {
+  font-size: 1.8rem;
+  font-family: 'BioRhyme', serif;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+.services__headline {
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 2em;
+  color: #0068ad;
+  position: relative;
+}
+
+.services__headline::after {
+  content: "";
+  position: absolute;
+  top: .5em;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid #0068ad;
+  z-index: -2;
+
+}
+
+.services__headline::before {
+  content: "";
+  width: 200px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  left: calc(50% - 100px);
+  z-index: -1;
+}
+
+.services__services-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.4em;
+}
+
+.services__services-list li {
+  margin: 1em;
+  background: url('../images/services-thumbnails-placeholder.gif') center top no-repeat;
+  padding-top: 220px;
+  /* outline: 1px solid pink; */
+
+}
+
+.services__button {
+  display: block;
+  text-transform: uppercase;
+  font-size: .7em;
+  color: #0068ad;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #0068ad;
+  position: relative;
+}
+
+.services__button:active {
+  top: 2px;
+}
+
+li.services--beverages {
+  background-image: url('../images/services-beverages.jpg');
+}
+
+li.services--coffee {
+  background-image: url('../images/services-coffee.jpg');
+}
+
+li.services--vending {
+  background-image: url('../images/services-vending.jpg');
+}
+
+li.services--equipment {
+  background-image: url('../images/services-equipment.jpg');
+}
+
+li.services--water {
+  background-image: url('../images/services-water.jpg');
+}
 
 /* Media Queries */
+
+@media screen and (min-width: 600px) {
+
+  .services__services-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+}
 
 
 @media screen and (min-width: 700px) {
@@ -224,12 +323,14 @@ strong {
 }
 
 .company-intro {
-  background: red;
+  background: url('../images/corwin-building.jpg') center top / cover;
+
 }
 
 
 .blurb {
-  width: 450px;
+  width: 510px;
+  margin-left: 0;
 }
 
 
@@ -266,11 +367,46 @@ strong {
     height: auto;
   }
 
-
-
 }
 
+@media screen and (min-width: 1020px) {
 
+  .company-intro {
+    margin-bottom: 130px; /* Making room for the triangular badge shape around the blurb */
+  }
+
+
+  .blurb {
+    margin-left: 50%;
+    position: relative;
+    left: -510px;
+    padding-bottom: 0;
+  }
+
+  .blurb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(100% + 40px);
+    width: 510px;
+    box-sizing: border-box;
+    border-top: 50px solid black;
+    border-right: 255px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 255px solid transparent;
+  }
+
+  .blurb::before {
+    content: "hey";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 510px;
+    height: 40px;
+    box-sizing: border-box;
+    background: black;
+  }
+}
 
 
 @media screen and (min-width: 1250px) {
