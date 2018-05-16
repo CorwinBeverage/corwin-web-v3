@@ -10,6 +10,13 @@
   <link href="https://fonts.googleapis.com/css?family=BioRhyme:400,800|Raleway:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
+
+  <!-- Slider -->
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+
+
 </head>
 <body>
 
@@ -59,5 +66,46 @@
   </ul>
 </section>
 
+<section class="slider-section">
+
+  <div id="slider1" class="slider home-page-slider">
+
+    <div>
+      <img class="slider-image" src="images/20oz-bottle-mockup.png" />
+      <div class="slider-caption">
+        <h3>Beverages</h3>
+        <p>We distribute Pepsi, Gatorade, MTN Dew, and dozens of other leading brands.</p>
+        <a class="slider__button" href="#">Download Pricebook</a>
+      </div>
+    </div>
+
+    <div>
+      <img class="slider-image" src="images/coffee-slide.png" />
+      <div class="slider-caption">
+        <h3>Coffee</h3>
+        <p>Get a customized coffee program that is the best fit for  your store or office.</p>
+        <a class="slider__button" href="#">Learn More</a>
+
+      </div>
+    </div>
+
+    <div>
+      <img class="slider-image" src="images/pepsi-cooler.png" />
+      <div class="slider-caption">
+        <h3>Equipment</h3>
+        <p>We service coolers, fountain machines, and draft equipment.</p>
+        <a class="slider__button" href="#">Learn More</a>
+      </div>
+    </div>
+
+  </div><!-- end #slider1 -->
+
+
+<!-- Box Slider script -->
+  <script>
+    $(document).ready(function(){
+      $('#slider1').bxSlider();
+    });
+  </script>
 </body>
 </html>

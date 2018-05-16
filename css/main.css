@@ -243,7 +243,109 @@ li.services--water {
   background-image: url('../images/services-water.jpg');
 }
 
-/* Media Queries */
+/* Slider */
+
+.slider-section {
+  font-size: 1.8rem;
+  background: #00254d;
+  background: url('../images/wire-background.svg'),
+    linear-gradient(#083b73 70%, #041a31);
+  color: white;
+}
+
+.logo-slider-section .column-wrapper {
+  max-width: 800px;
+  position: relative;
+}
+
+.logo-slider-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  background: #083b73;
+  padding: 18px;
+  text-shadow: 4px 4px 3px #052a52;
+}
+
+.home-page-slider > div {
+  display: flex;
+  padding: 0 50px 25px 50px ;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+  position: relative;
+}
+
+.bx-viewport {
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
+.slider-section .bx-wrapper {
+  margin-bottom: 0;
+}
+
+.slider-section .bx-wrapper .bx-pager {
+  position: static;
+  padding-bottom: 20px;
+}
+
+.slider p {
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+.slider-caption h3 {
+  font-size: 1.5em;
+  font-family: 'BioRhyme', serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.slider-caption p {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 1em 0;
+}
+
+.slider-image {
+  z-index: -1;
+}
+
+.slider__button {
+    display: inline-block;
+    font-family: 'BioRhyme', serif;
+    text-transform: uppercase;
+    color: white;
+    margin: 1em 0;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid white;
+    position: relative;
+    background: #0068ad;
+  }
+
+  .services__button:active {
+    top: 2px;
+  }
+
+
+@media screen and (min-width: 990px) {
+
+  .home-page-slider > div {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .bx-viewport {
+    padding: 0;
+  }
+
+}
+
+/* General media queries */
 
 @media screen and (min-width: 600px) {
 
@@ -301,7 +403,6 @@ li.services--water {
     border-bottom: none;
 }
 
-
 .site-nav__logo {
   width: 180px;
 }
@@ -327,17 +428,10 @@ li.services--water {
 
 }
 
-
 .blurb {
   width: 510px;
   margin-left: 0;
 }
-
-
-
-
-
-
 
 }
 
@@ -397,7 +491,7 @@ li.services--water {
   }
 
   .blurb::before {
-    content: "hey";
+    content: "";
     position: absolute;
     left: 0;
     top: 100%;
@@ -406,6 +500,11 @@ li.services--water {
     box-sizing: border-box;
     background: black;
   }
+
+  .services__headline {
+    margin-left: -13.7em;
+  }
+
 }
 
 
