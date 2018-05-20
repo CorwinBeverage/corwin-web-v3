@@ -184,6 +184,15 @@ ul.bxslider {
   transform: rotate(180deg);
 }
 
+.bx-wrapper .bx-prev:active {
+  margin-top: 2px;
+}
+
+.bx-wrapper .bx-next:active {
+  margin-top: 2px;
+}
+
+
 @media screen and (min-width: 700px) {
   .bx-wrapper .bx-next {
       margin-right: 2em;
