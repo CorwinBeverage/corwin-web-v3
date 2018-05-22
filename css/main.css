@@ -211,6 +211,8 @@ h2 {
 }
 
 .services__services-list li {
+  min-width: 195px;
+  font-size: .9em;
   margin: 1em;
   background: url('../images/services-thumbnails-placeholder.gif') center top no-repeat;
   padding-top: 220px;
@@ -218,16 +220,23 @@ h2 {
 
 }
 
+@media screen and (min-width: 1200px) {
+  .services__services-list li {
+    min-width: 30;
+  }
+}
+
 .services__button {
   display: block;
   text-transform: uppercase;
-  font-size: .7em;
+  font-size: .6em;
   color: #0068ad;
   margin: 1em;
   padding: 1em;
   border: 1px solid #0068ad;
   position: relative;
 }
+
 
 .services__button:active {
   top: 2px;
@@ -251,6 +260,11 @@ li.services--equipment {
 
 li.services--water {
   background-image: url('../images/services-water.jpg');
+}
+
+li.services--crave {
+  background-image: url('../images/services-crave.gif');
+  background-size: 200px auto;
 }
 
 /* Slider */
