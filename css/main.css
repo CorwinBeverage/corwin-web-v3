@@ -914,7 +914,12 @@ li.services--crave {
   top: 2px;
 }
 
-
+.paycom-portal {
+  height: 800px;
+  max-width: calc(100% - 25px);
+  padding-left: 20px;
+  -webkit-overflow-scrolling:touch;
+}
 
 
 
