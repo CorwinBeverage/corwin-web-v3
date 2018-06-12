@@ -37,6 +37,60 @@ h2 {
   font-size: 2em;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+
+/* Utility classes */
+
+
+.video-grid {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.video-grid .video-responsive {
+  margin: 1em;
+}
+
+
+
+
+/* Getting the embedded videos flexible:
+https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+*/
+
+.video-responsive {
+    position: relative;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	padding-top: 25px;
+  	height: 0;
+}
+
+.video-responsive iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+@media screen and (min-width: 400px) {
+
+  .float-right {
+    float: right;
+  }
+
+  .float-clear:after {
+    content:"";
+    display: block;
+  }
+
+}
 
 .site-nav {
   font-size: 2rem;
@@ -713,6 +767,8 @@ li.services--crave {
 
 .page__wrapper {
   min-height: 600px;
+  max-width: 44em;
+  margin: 0 auto;
 }
 
 .page h2 {
@@ -819,6 +875,49 @@ li.services--crave {
   background: url("../images/email-icon.svg") center center / 26px 19px no-repeat;
   padding-top: .25em;
 }
+
+
+/* Careers page */
+
+.job-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.job-list li {
+  background: aliceblue;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.job-list__email-link {
+  color: #0068ad;
+  font-weight: 700;
+}
+
+.job-list__button {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: white;
+  background: #0068ad;
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #0068ad;
+  position: relative;
+  width: 200px;
+  text-align: center;
+  margin: 0 0 0 auto;
+}
+
+.job-list__button:active {
+  top: 2px;
+}
+
+
+
+
+
 
 /* General media queries */
 
