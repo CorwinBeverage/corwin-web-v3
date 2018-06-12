@@ -79,7 +79,7 @@ https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 }
 
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
 
   .float-right {
     float: right;
