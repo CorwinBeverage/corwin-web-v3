@@ -766,7 +766,7 @@ li.services--crave {
 }
 
 .page__wrapper {
-  min-height: 600px;
+  /* min-height: 600px; */
   max-width: 44em;
   margin: 0 auto;
 }
@@ -799,16 +799,31 @@ li.services--crave {
 .contact__phone-number {
   display: flex;
   flex-flow: column wrap;
-  /* outline: 1px solid red; */
   justify-content: space-between;
   margin: .5em 0;
+}
+
+.contact--email a {
+  font-size: .8em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  color: #0068ad;
+}
+
+@media screen and (min-width: 800px) {
+
+  .contact__email a {
+    font-size: 1em;
+  }
+
 }
 
 @media screen and (min-width: 325px) {
 
   .contact__phone-number {
     flex-flow: row nowrap;
-    max-width: 20em;
+    max-width: 30em;
     align-items: flex-end;
     border-bottom: 1px dotted grey;
     margin-top: 12px
@@ -829,12 +844,10 @@ li.services--crave {
   text-transform: uppercase;
   font-weight: bold;
   padding-right: .5em;
-  /* outline: 1px solid green; */
 }
 
 .contact__number {
   padding-left: .5em;
-  /* outline: 1px solid blue; */
 }
 
 .contact__map {
@@ -921,7 +934,33 @@ li.services--crave {
   -webkit-overflow-scrolling:touch;
 }
 
+/* Request Service page */
 
+.request-service {
+  background: url("../images/service-icon.svg") center calc(100% - 1em) / 150px 150px no-repeat;
+  padding-bottom: 200px;
+}
+
+@media screen and (min-width: 600px) {
+
+  .request-service {
+    background: url("../images/service-icon.svg") calc(100% - 3em) center / 150px 150px no-repeat;
+    padding-bottom: 5em;
+    padding-right: 250px;
+  }
+}
+
+
+/* Page Under Construction */
+
+.construction {
+  padding-bottom: 300px;
+  background: url("../images/fork-lift.svg") center calc(100% - 3em) / 300px 242px no-repeat;
+}
+
+.construction h2, .construction p {
+  text-align: center;
+}
 
 
 /* General media queries */
