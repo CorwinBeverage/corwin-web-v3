@@ -961,44 +961,15 @@ li.services--crave {
 /* Community page */
 
 .community__logo-grid {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+
 }
 
 .community__logo-group {
-  border-radius: 10px;
-  text-align: center;
-  max-width: 275px;
-}
-
-@media screen and (min-width: 800px) {
-
-  .community__logo-grid {
-    flex-flow: row wrap;
-  }
-
-
-}
-
-.community__logo-group img {
-  border: 1px solid #8ca800;
+  border: 1px solid grey;
   border-radius: 10px;
   padding: .5em;
+  text-align: center;
 }
-
-.community__website {
-  font-size: .8em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: black;
-}
-
-.community__website:hover {
-  color: #8ca800;
-}
-
-
 
 /* General media queries */
 
