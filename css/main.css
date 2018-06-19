@@ -1011,6 +1011,14 @@ li.services--crave {
   margin: 1em auto;
 }
 
+/* Water */
+
+.water-service-image {
+  display: block;
+  margin: 1em auto;
+  width: 400px;
+}
+
 
 /* General media queries */
 
