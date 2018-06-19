@@ -998,6 +998,18 @@ li.services--crave {
   color: #8ca800;
 }
 
+/* Fountain */
+
+.pepsi-fountain-unit {
+  display: block;
+  margin: 1em auto;
+  width: 350px;
+}
+
+.pepsi-bogo-coolers {
+  display: block;
+  margin: 1em auto;
+}
 
 
 /* General media queries */
