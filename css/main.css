@@ -185,9 +185,8 @@ https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 
 
   .site-nav {
-
-  /* height: 715px; /*TODO: Make height flexible */ */
-
+  height: 250px;
+  transition: all .3s ease;
   }
 
   .site-nav__actions-wrapper, .site-nav__toolbar {
