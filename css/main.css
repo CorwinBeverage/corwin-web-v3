@@ -197,37 +197,39 @@ https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
   /* Thanks to Andy Bell's codepen for styling native button elements:
   https://codepen.io/hankchizljaw/pen/Vxpjvo */
 
-  .toggle-menu {
-      display: block;
-      border: none;
-      margin: 1em auto;
-      width: 90px;
-      height: 60px;
-      text-decoration: none;
-      text-indent: -9999px;
-      background: url("../images/menu-icon.svg") center center / contain no-repeat ;
-      color: #ffffff;
-      cursor: pointer;
-      text-align: center;
-      transition: background 250ms ease-in-out,
-                  transform 150ms ease;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-  }
+  button {
+    display:block;
+    margin: 2em auto;
 
-  .toggle-menu:hover,
-  .toggle-menu:focus {
-      outline: 1px solid #3795d4;
-  }
+    border: 1px solid grey;
+    padding: 1em;
+    text-decoration: none;
+    background: white;
+    color: #555;
+    font-size: .8em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: all .2s ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 
-  .toggle-menu:focus {
-      outline: 1px solid #fff;
-      outline-offset: -4px;
-  }
+button:hover,
+button:focus {
+  background: whitesmoke;
+}
 
-  button:active {
-      transform: scale(0.99);
-  }
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
 
 
 .menu-visible {
