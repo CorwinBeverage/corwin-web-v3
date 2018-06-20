@@ -41,7 +41,7 @@
 </head>
 <body>
 
-  <nav class="site-nav">
+  <header id="site-nav" class="site-nav">
 
     <a class="site-nav__logo-wrapper" href="index.html">
       <img class="site-nav__logo" alt="Corwin Beverage Logo" src="images/corwin-logo-color.svg">
@@ -49,21 +49,25 @@
 
     <a class="site-nav__title" href="index.html">Corwin Beverage Company</a>
 
-    <nav class="site-nav__actions-wrapper">
+
+    <button id="toggle-menu" class="toggle-menu">Toggle menu</button>
+
+
+    <div class="site-nav__actions-wrapper">
       <a class="site-nav__action" href="request-service.html">Request Service</a>
       <a class="site-nav__action site-nav__action--orange" href="http://revoltcoffee.com">What's New at Corwin?</a>
       <a class="site-nav__action site-nav__action--green" href="community.html">Community</a>
       <a class="site-nav__action site-nav__action--magenta" href="contact.html">Our Team</a>
-    </nav>
+    </div>
 
-    <nav class="site-nav__toolbar">
+    <div class="site-nav__toolbar">
       <a class="site-nav__toolbar-item" href="about-us.html">About</a>
       <a class="site-nav__toolbar-item" href="careers.html">Careers</a>
       <a class="site-nav__toolbar-item" href="services.html">Services</a>
       <a class="site-nav__toolbar-item" href="contact.html">Contact Us</a>
   </nav>
 
-</nav><!-- end of .site-nav -->
+</header><!-- end of .site-nav -->
 
 
 <div class="home-hero-banner"></div>
@@ -170,6 +174,18 @@
 
   </footer>
 
+<!-- Menu slide script -->
+
+<script>
+
+var button = document.getElementById("toggle-menu");
+var menu = document.getElementById("site-nav");
+
+button.addEventListener("click", function() {
+  menu.classList.toggle("menu-visible");
+});
+
+</script>
 
 
 <!-- Box Slider script -->
