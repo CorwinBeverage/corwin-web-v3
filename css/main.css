@@ -178,6 +178,73 @@ https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
   border-bottom: none;
 }
 
+
+/* Slide Menu */
+
+@media screen and (max-width: 725px) {
+
+
+  .site-nav {
+
+  /* height: 715px; /*TODO: Make height flexible */ */
+
+  }
+
+  .site-nav__actions-wrapper, .site-nav__toolbar {
+    display: none;
+    opacity: 0;
+  }
+
+  /* Thanks to Andy Bell's codepen for styling native button elements:
+  https://codepen.io/hankchizljaw/pen/Vxpjvo */
+
+  .toggle-menu {
+      display: block;
+      border: none;
+      margin: 1em auto;
+      width: 90px;
+      height: 60px;
+      text-decoration: none;
+      text-indent: -9999px;
+      background: url("../images/menu-icon.svg") center center / contain no-repeat ;
+      color: #ffffff;
+      cursor: pointer;
+      text-align: center;
+      transition: background 250ms ease-in-out,
+                  transform 150ms ease;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+
+  .toggle-menu:hover,
+  .toggle-menu:focus {
+      outline: 1px solid #3795d4;
+  }
+
+  .toggle-menu:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px;
+  }
+
+  button:active {
+      transform: scale(0.99);
+  }
+
+
+.menu-visible {
+  height: 715px;
+}
+
+.menu-visible .site-nav__actions-wrapper,
+.menu-visible .site-nav__toolbar  {
+  display: block;
+  opacity: 1;
+}
+
+
+}
+
+
 .home-hero-banner {
   background: url('../images/corwin-truck-narrow.jpg') no-repeat center center;
   background-size: cover;
@@ -1034,6 +1101,10 @@ li.services--crave {
 
 
 @media screen and (min-width: 725px) {
+
+  .toggle-menu {
+    display: none;
+}
 
   .site-nav {
     display: flex;
