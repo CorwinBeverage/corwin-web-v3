@@ -37,6 +37,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
 
+  <!-- Animate On Scroll library
+      https://michalsnik.github.io/aos/  -->
+
+  <link rel="stylesheet" href="css/aos.css">
+  <script src="js/aos.js"></script>
 
 </head>
 <body>
@@ -73,7 +78,7 @@
 <div class="home-hero-banner"></div>
 
 <section class="intro">
-  <div class="intro__wrapper">
+  <div class="intro__wrapper" data-aos="fade-right">
     <img class="intro__logo" src="images/corwin-logo-reverse.svg" alt="Corwin Beverage Company logo">
 
     <h2 class="intro__headline tk-pauline">Refreshing Southwest Washington</h2>
@@ -85,13 +90,18 @@
 <section id="services" class="services">
   <h2 class="services__headline tk-pauline">services</h2>
   <ul class="services__services-list">
-    <li class="services--beverages">Beverages <a class="services__button" href="pricebook.pdf">Pricebook</a></li>
-    <li class="services--coffee">Coffee <a class="services__button" href="http://revoltcoffee.com">Learn More</a></li>
-    <li class="services--vending">Vending <a class="services__button" href="vending.html">Learn More</a></li>
-    <li class="services--equipment">Fountain <a class="services__button" href="fountain.html">Learn More</a></li>
-    <li class="services--water">Water <a class="services__button" href="water.html">Learn More</a></li>
-    <li class="services--crave">Crave MicroMarkets <a class="services__button" href="crave.html">Learn More</a></li>
+    <li data-aos="fade-up" class="services--beverages">Beverages <a class="services__button" href="pricebook.pdf">Pricebook</a></li>
+    <li data-aos="fade-up" class="services--coffee">Coffee <a class="services__button" href="http://revoltcoffee.com">Learn More</a></li>
+    <li data-aos="fade-up" class="services--vending">Vending <a class="services__button" href="vending.html">Learn More</a></li>
+    <li data-aos="fade-up" class="services--equipment">Fountain <a class="services__button" href="fountain.html">Learn More</a></li>
+    <li data-aos="fade-up" class="services--water">Water <a class="services__button" href="water.html">Learn More</a></li>
+    <li data-aos="fade-up" class="services--crave">Crave MicroMarkets <a class="services__button" href="crave.html">Learn More</a></li>
   </ul>
+
+  <!-- This is a kludge for Animate on Scroll. The slideshow appears to be throwing off the screen height, so AOS isn't able to accuration determine the visibility for items below the slideshow. -->
+  <div id="aos-trigger1"></div>
+  <div id="aos-trigger2"></div>
+
 </section>
 
 <section class="slider-section">
@@ -128,9 +138,8 @@
 
   </div><!-- end #slider1 -->
 </section>
-
   <section class="kendalls">
-    <div class="kendalls__wrapper">
+    <div data-aos="fade-right" data-aos-anchor="#aos-trigger1" class="kendalls__wrapper">
       <h2>Looking for Craft Beer, Wine, & Cider?</h2>
       <p>Kendall’s Craft Beverages is Corwin Beverage’s beer and wine division.</p>
       <p>Artisanal, small batch, handcrafted, boutique &mdash; we have relationships with the folks who are changing the beverage landscape in our region.</p>
@@ -143,10 +152,10 @@
     <div class="featured__wrapper">
       <h2 class="featured__headline">Featured Products</h2>
       <ul class="featured__list">
-        <li><a href="http://revoltcoffee.com/"><img alt="Revolt Coffee logo" src="images/revolt-log.svg"></a></li>
-        <li><a href="http://www.mountaindew.com/dewice/"><img alt="Mountain Dew Ice logo logo" src="images/mtn-dew-ice-logo.svg"></a></li>
-        <li><a href="https://www.bubly.com/#/"><img alt="Bubly logo logo" src="images/bubly-logo.svg"></a></li>
-        <li><a href="https://www.silagysauce.com/"><img alt="Silagy Hot Sauce logo" src="images/silagy-logo.svg"></a></li>
+        <li data-aos="fade-up" data-aos-anchor="#aos-trigger2" ><a href="http://revoltcoffee.com/"><img alt="Revolt Coffee logo" src="images/revolt-log.svg"></a></li>
+        <li data-aos="fade-up" data-aos-anchor="#aos-trigger2" ><a href="http://www.mountaindew.com/dewice/"><img alt="Mountain Dew Ice logo logo" src="images/mtn-dew-ice-logo.svg"></a></li>
+        <li data-aos="fade-up" data-aos-anchor="#aos-trigger2" ><a href="https://www.bubly.com/#/"><img alt="Bubly logo logo" src="images/bubly-logo.svg"></a></li>
+        <li data-aos="fade-up" data-aos-anchor="#aos-trigger2" ><a href="https://www.silagysauce.com/"><img alt="Silagy Hot Sauce logo" src="images/silagy-logo.svg"></a></li>
       </ul>
     </div>
   </section>
@@ -194,5 +203,17 @@ button.addEventListener("click", function() {
       $('#slider1').bxSlider();
     });
   </script>
+
+
+<!-- Animate on Scroll -->
+
+<script>
+AOS.init({
+  duration: 1100,
+})
+</script>
+
+
+
 </body>
 </html>

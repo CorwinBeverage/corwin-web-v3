@@ -1088,6 +1088,22 @@ li.services--crave {
 }
 
 
+/* Animate on Scroll */
+
+#aos-trigger1 {
+  text-transform: uppercase;
+  position: relative;
+  top: 250px;
+}
+
+#aos-trigger2 {
+  text-transform: uppercase;
+  position: relative;
+  top: 850px;
+}
+
+
+
 /* General media queries */
 
 @media screen and (min-width: 600px) {
